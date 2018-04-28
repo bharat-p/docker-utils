@@ -16,6 +16,18 @@ package main
 
 import "github.com/bharat-p/docker-utils/cmd"
 
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+)
+
+func init() {
+	cmd.VersionString = version
+	cmd.Commit = commit
+	cmd.BuildDate = date
+}
+
 func main() {
 	cmd.Execute()
 }
